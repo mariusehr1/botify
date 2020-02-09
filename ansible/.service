@@ -1,0 +1,8 @@
+[Unit]
+Description=Runs Botify containe
+After=docker.service
+[Service]
+ExecStart=/usr/bin/docker run --name botify -p 8080:8080 mariusmuvraline/botify 
+ExecStop=/usr/bin/docker stop botify
+[Install]
+WantedBy=multi-user.target

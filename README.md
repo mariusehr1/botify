@@ -77,5 +77,3 @@ journalctl -u botify.service
  #### - How would you ​scale​ this application so it can serve a high number of requests?
 
  I would use a more stateless mechanism (e.g externalizing the database) in order to share it across multiple instances. I would probably use a tool like Kubernetes in order to have fully scalable infrastructure and application.
-
-
