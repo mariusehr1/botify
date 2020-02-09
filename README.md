@@ -3,17 +3,18 @@
 The following projet will deploy a Flask project into a remote machine with minimal setup: it contains an ansible script that will install all the necessary dependencies for your application to run. It will run as a docker image wrapped in a systemd service: the application will be server on port 8080.
 
 
+
 ## Requirements
 
 - Two machines running systemd 
-- The webserver should have a ubuntu user pre-added 
-- This user should also have the sudo privilege without password : the following entry had to be added to /etc/sudoers beforehand
+- The webserver should have a user named ubuntu user pre-added 
+- This user should also have the sudo privilege without password : the following entry has to be added to /etc/sudoers beforehand
 ```
 ubuntu  ALL=(ALL) NOPASSWD: ALL
 ```
 - A Git client
 - Ansible
-
+- During this tutorial, i'll be connecting to localhost on port 2222 for the webserver but feel free to change it in ./ansible/hosts and replace localhost by your hosts adress as well as the port in the next commands.
 
 ## Usage
 
